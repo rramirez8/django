@@ -1,0 +1,36 @@
+tutorial URL: https://www.youtube.com/watch?v=Z4D3M-NSN58&list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9&index=1
+
+
+VIDEO 1
+--------------------
+1. install django
+    pip install django
+2. create django project
+    django-admin startproject log_ger
+3. cd into log_ger dir
+    cd log_ger
+4. start server
+    python manage.py runserver
+5. ctrl-click on  http://127.0.0.1:8000/
+6. CTRL-C to stop server
+7. run command to create application env
+    cd to folder that has manage.py
+    python manage.py startapp main
+8. run server again
+    python manage.py runserver
+9. in views.py of main code imports
+10. inside of main folder create urls.py
+11. in log_ger folder go to urls.py and ad "include" to django.urls import statement
+    in urlpatterns list add entry for main.urls using include and '' as first arg
+
+VIDEO 2
+-----------------
+1. go to settings.py and add entry into installed apps section
+    'main.apps.MainConfig'
+2. go to parent folder where manage.py folder lives and run command 
+    python manage.py migrate
+3. build model classes in models.py file
+4. update main app to recognize new models by running command
+    python manage.py makemigrations main
+5. apply the models by running command
+    python manage.py migrate
