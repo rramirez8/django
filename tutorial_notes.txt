@@ -34,3 +34,20 @@ VIDEO 2
     python manage.py makemigrations main
 5. apply the models by running command
     python manage.py migrate
+
+VIDEO 3
+--------------------
+1. setup login to admin console
+    python manage.py createsuperuser
+    enter user id, email, pw
+2. start server
+    python manage.py runserver
+3. log into admin console using creds
+4. Register models with admin console so the console can access those structures
+    in admin.py put in the following code
+        from .models import ToDoList
+        admin.site.register(ToDoList)
+
+VIDEO 4
+--------------------
+
